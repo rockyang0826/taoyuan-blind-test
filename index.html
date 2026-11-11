@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>看不見名字的選擇｜2026 桃園市長政見盲測</title>
+<meta name="description" content="20 題 2026 桃園市長政見盲測：姓名政黨全部隱去，先作答、先憑直覺猜，再開票揭曉每題是誰的主張。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rockyang0826.github.io/taoyuan-blind-test/">
+<meta property="og:title" content="看不見名字的選擇｜2026 桃園市長政見盲測">
+<meta property="og:description" content="20 題政見盲測：先作答、先猜，再開票揭曉每題是誰的主張。答案預先封存，可自行驗算。">
+<meta property="og:image" content="https://rockyang0826.github.io/taoyuan-blind-test/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F2F7; --card:#FFFFFF; --ink:#1F1C2C; --muted:#5D586F; --line:#DAD6E5;
+  --accent:#2E2748; --accent-ink:#FFFFFF; --soft:#E8E5F2; --warn:#8A5A00; --warnbg:#FBF1DC;
+  --h:#6E4C9C; --hbg:#EFE8F8; --z:#9C6A0E; --zbg:#F8EDD6;
+  --stamp:#B8324B; --stampbg:#FBE9EC;
+  --ok:#3E6B4E; --bad:#9B3B3B;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#16141E; --card:#211E2C; --ink:#ECE9F4; --muted:#A9A3BC; --line:#37324A;
+    --accent:#CFC5F2; --accent-ink:#1A1726; --soft:#2A2638; --warn:#F0C46A; --warnbg:#3A2F17;
+    --h:#B79AE6; --hbg:#2E2542; --z:#E3B04B; --zbg:#3A2E15; --ok:#8CC79E; --bad:#E59A9A; --stamp:#F0859A; --stampbg:#3A1E26;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#16141E; --card:#211E2C; --ink:#ECE9F4; --muted:#A9A3BC; --line:#37324A;
+  --accent:#CFC5F2; --accent-ink:#1A1726; --soft:#2A2638; --warn:#F0C46A; --warnbg:#3A2F17;
+  --h:#B79AE6; --hbg:#2E2542; --z:#E3B04B; --zbg:#3A2E15; --ok:#8CC79E; --bad:#E59A9A; --stamp:#F0859A; --stampbg:#3A1E26;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);line-height:1.3;margin:0}
+p{margin:0 0 .8em}
+img,svg{max-width:100%}
+
+/* hero */
+.hero{padding:56px 0 28px;display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:900;letter-spacing:.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);margin-top:14px;max-width:34em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{display:inline-block;font-size:.85rem;padding:3px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted)}
+.hero-art{justify-self:center;width:100%;max-width:340px}
+@media (max-width:720px){.hero{grid-template-columns:1fr;padding-top:32px}.hero-art{max-width:240px;order:-1}}
+
+/* panels */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:18px 0}
+.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.howto h3{font-size:1.05rem;margin-bottom:6px}
+.howto p{font-size:.95rem;color:var(--muted);margin:0}
+@media (max-width:720px){.howto{grid-template-columns:1fr}}
+.commit{display:flex;gap:16px;align-items:flex-start}
+.commit code{font-size:.82rem;word-break:break-all;background:var(--soft);padding:6px 10px;border-radius:8px;display:block;margin-top:6px}
+.note{font-size:.9rem;color:var(--muted)}
+.warnbox{background:var(--warnbg);color:var(--ink);border-radius:12px;padding:12px 16px;font-size:.92rem}
+
+/* domain sections */
+.domain{margin-top:44px}
+.domain-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.domain-head svg{width:52px;height:52px;flex:none}
+.domain-head h2{font-size:1.55rem}
+.domain-head .cnt{font-size:.9rem;color:var(--muted)}
+
+/* question */
+.q{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:14px 0}
+.q.done{border-color:var(--accent)}
+.q-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.q-no{font-family:var(--serif);font-weight:700;font-size:1.15rem}
+.q-type{font-size:.82rem;color:var(--muted)}
+.q-topic{font-weight:700;margin:4px 0 12px;font-size:1.05rem}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.opts{grid-template-columns:1fr}}
+.opt{all:unset;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--paper);line-height:1.7;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--muted)}
+.opt .lt{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;border:1.5px solid var(--ink);font-family:var(--serif)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+.opt[aria-pressed="true"] .lt{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.extra{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:12px;font-size:.92rem}
+.mini{all:unset;cursor:pointer;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--paper)}
+.mini[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.mini:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{all:unset;cursor:pointer;padding:4px 12px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.seg button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.know{display:inline-flex;align-items:center;gap:6px;color:var(--muted);cursor:pointer}
+.know input{width:18px;height:18px;accent-color:var(--accent)}
+
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--line);padding:10px 0;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .wrap{display:flex;align-items:center;gap:16px}
+.prog{flex:1;height:8px;background:var(--soft);border-radius:999px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.cta{all:unset;cursor:pointer;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:10px 20px;border-radius:12px;white-space:nowrap}
+.cta[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.cta:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.spacer{height:110px}
+
+/* results */
+#result{display:none}
+#result.on{display:block}
+.r-hero{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-top:48px}
+.r-hero svg{width:120px;height:120px}
+.r-hero h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:900}
+@media (max-width:640px){.r-hero{grid-template-columns:1fr}.r-hero svg{width:90px;height:90px}}
+.sec{margin-top:40px}
+.sec>h2{font-size:1.5rem;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.split{display:flex;height:42px;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:10px 0 6px}
+.split div{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;min-width:0;white-space:nowrap;overflow:hidden}
+.sh{background:var(--h);color:#fff}
+.sz{background:var(--z);color:#fff}
+.sn{background:var(--soft);color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.9rem;color:var(--muted)}
+.dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:720px){.kpis{grid-template-columns:1fr}}
+.kpi h3{font-size:1.05rem}
+.verdict{font-family:var(--serif);font-size:1.25rem;font-weight:700;margin:6px 0 2px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem;line-height:1.65}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.tagH{color:var(--h);font-weight:700}
+.tagZ{color:var(--z);font-weight:700}
+.pill{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:999px;margin:1px 2px;white-space:nowrap}
+.pH{background:var(--hbg);color:var(--h)} .pZ{background:var(--zbg);color:var(--z)}
+.pN{background:var(--soft);color:var(--muted)}
+.ev{font-size:.78rem;font-weight:700;padding:1px 6px;border-radius:6px;white-space:nowrap;border:1px solid currentColor}
+.e1{color:var(--ok)} .e2{color:var(--muted)} .e3{color:var(--warn)} .e4{color:var(--bad)}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.twocol{grid-template-columns:1fr}}
+.cand{border-radius:16px;padding:18px 20px;border:1px solid var(--line);background:var(--card)}
+.cand.h{border-top:5px solid var(--h)} .cand.z{border-top:5px solid var(--z)}
+.cand h3{font-size:1.2rem;margin-bottom:4px}
+.cand .role{font-size:.88rem;color:var(--muted);margin-bottom:10px}
+.cand ul{margin:0;padding-left:1.2em}
+.cand li{margin-bottom:.55em;font-size:.95rem}
+.src{font-size:.82rem;color:var(--muted)}
+.srclist{columns:2;column-gap:28px;font-size:.85rem}
+.srclist li{break-inside:avoid;margin-bottom:6px}
+@media (max-width:640px){.srclist{columns:1}}
+.verify{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.btn2{all:unset;cursor:pointer;border:1.5px solid var(--ink);padding:6px 14px;border-radius:10px;font-weight:700;font-size:.92rem}
+.btn2:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;word-break:break-all}
+.reset{margin-top:24px}
+footer{margin:56px 0 24px;font-size:.85rem;color:var(--muted)}
+
+/* ===== 參與感強化 ===== */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:16;background:var(--paper)}
+.chapnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--paper);padding:10px 0;margin:8px -20px 0;padding-left:20px;padding-right:20px;border-bottom:1px solid var(--line)}
+.chapnav ol{list-style:none;margin:0;padding:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chapnav ol::-webkit-scrollbar{display:none}
+.chapnav a{display:flex;align-items:center;gap:6px;text-decoration:none;white-space:nowrap;padding:5px 12px 5px 6px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.88rem;color:var(--muted)}
+.chapnav a svg{width:24px;height:24px}
+.chapnav a b{font-weight:700;color:var(--ink)}
+.chapnav a.full{border-color:var(--stamp);color:var(--stamp)}
+.chapnav a.full b{color:var(--stamp)}
+.domain{scroll-margin-top:70px}
+.cover{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px 22px;margin-bottom:6px;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:var(--soft);z-index:0}
+.cover>*{position:relative;z-index:1}
+.cover svg{width:96px;height:96px}
+.cover .kick{font-size:.88rem;color:var(--muted);font-weight:500}
+.cover h2{font-size:1.7rem;margin:2px 0 4px}
+.cover p{margin:0;color:var(--muted);font-size:.98rem}
+.cover .done-badge{display:none;color:var(--stamp);font-weight:700;font-size:.9rem;margin-top:4px}
+.domain.full .cover .done-badge{display:block}
+@media (max-width:560px){.cover{grid-template-columns:64px 1fr;padding:14px 16px}.cover svg{width:64px;height:64px}.cover h2{font-size:1.4rem}}
+.opt{position:relative;transition:border-color .15s,background .15s,opacity .2s,transform .15s}
+.opt:hover{transform:translateY(-2px)}
+.q.has .opt[aria-pressed="false"]{opacity:.6}
+.q.has .opt[aria-pressed="false"]:hover{opacity:1}
+.opt[aria-pressed="true"]{border-color:var(--stamp);background:var(--stampbg)}
+.opt[aria-pressed="true"] .lt{background:var(--stamp);border-color:var(--stamp);color:var(--paper)}
+.opt{padding-right:46px}
+.stamp{position:absolute;right:-8px;top:-18px;width:52px;height:52px;opacity:0;transform:scale(1.7) rotate(-14deg);pointer-events:none}
+.opt[aria-pressed="true"] .stamp{opacity:.95;transform:scale(1) rotate(-14deg);transition:transform .25s cubic-bezier(.2,1.7,.4,1),opacity .12s}
+.mini[aria-pressed="true"]{background:var(--stamp);border-color:var(--stamp);color:var(--paper)}
+.q.done{border-color:var(--line);box-shadow:inset 4px 0 0 var(--stamp)}
+.q-check{display:none;color:var(--stamp);font-size:.85rem;font-weight:700}
+.q.done .q-check{display:inline}
+.wlbl{color:var(--muted)}
+.seg button{padding:4px 12px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:30;background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:14px;font-weight:500;display:flex;gap:10px;align-items:center;transition:opacity .25s,transform .25s;width:max-content;max-width:calc(100% - 32px)}
+@media (max-width:560px){.opt{padding-right:34px}.stamp{width:44px;height:44px;right:-6px;top:-14px}}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast svg{width:28px;height:28px;flex:none}
+.cta.ready{background:var(--stamp);color:var(--paper);animation:nudge 1.2s ease 1}
+@keyframes nudge{0%,100%{transform:scale(1)}40%{transform:scale(1.08)}70%{transform:scale(.97)}}
+/* ===== 遊戲化版本 ===== */
+.start{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--stamp);color:var(--paper);font-weight:700;font-size:1.05rem;padding:12px 22px;border-radius:14px}
+.start:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.start svg{width:22px;height:22px}
+.kbd{display:inline-block;font-size:.8rem;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:0 6px;background:var(--card);margin:0 2px;font-family:var(--sans)}
+
+/* 集章冊 */
+.book{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px 18px;margin-top:36px}
+.book-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.book-h h2{font-size:1.15rem}
+.book-h span{font-size:.9rem;color:var(--muted);font-weight:700}
+.book ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.slot{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-size:.78rem;color:var(--muted);border-radius:12px;padding:4px 0}
+.slot:focus-visible{outline:3px solid var(--accent)}
+.slot .ring{width:58px;height:58px;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center;position:relative;transition:transform .3s}
+.slot .ring svg{width:34px;height:34px;opacity:.45}
+.slot .cnt{font-weight:700}
+.slot.cur .ring{border-color:var(--ink)}
+.slot.full .ring{border:3px solid var(--stamp);background:var(--stampbg);transform:rotate(-10deg)}
+.slot.full .ring svg{opacity:1}
+.slot.full .ring::after{content:"完";position:absolute;right:-6px;bottom:-4px;background:var(--stamp);color:var(--paper);font-size:.7rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:grid;place-items:center}
+.slot.full{color:var(--stamp)}
+.slot.pop .ring{animation:pop .45s cubic-bezier(.2,1.7,.4,1)}
+@keyframes pop{0%{transform:scale(1.7) rotate(-10deg);opacity:0}100%{transform:scale(1) rotate(-10deg);opacity:1}}
+@media (max-width:640px){.book ol{gap:2px}.slot .ring{width:40px;height:40px}.slot .ring svg{width:24px;height:24px}.slot .nm{display:none}}
+
+/* 牌桌 */
+#game[hidden],#predict[hidden],#count[hidden]{display:none}
+.table-top{display:flex;justify-content:space-between;align-items:center;margin:22px 0 10px;gap:12px;flex-wrap:wrap}
+.table-top .where{font-size:.92rem;color:var(--muted)}
+.table-top .where b{color:var(--ink)}
+.stage{perspective:1600px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 26px 20px;position:relative;box-shadow:0 1px 0 var(--line),0 14px 30px -18px rgba(30,20,60,.35);transform-origin:50% 50%;transition:transform .32s ease,opacity .32s ease}
+.card.out{transform:rotateY(-88deg);opacity:.2}
+.card.in{transform:rotateY(88deg);opacity:.2;transition:none}
+.card .corner{position:absolute;font-family:var(--serif);font-weight:900;color:var(--line);font-size:1.4rem;line-height:1}
+.card .corner.tl{left:16px;top:12px}.card .corner.br{right:16px;bottom:12px;transform:rotate(180deg)}
+.card .chap{display:flex;align-items:center;gap:10px;margin:6px 0 6px 18px;color:var(--muted);font-size:.9rem}
+.card .chap svg{width:30px;height:30px}
+.card .topic{font-family:var(--serif);font-size:1.45rem;font-weight:700;margin:4px 0 4px}
+.card .typ{display:inline-block;font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin-bottom:14px}
+.card .opts{margin-top:4px}
+@media (max-width:560px){.card{padding:20px 16px 16px;min-height:0}.card .topic{font-size:1.25rem}}
+.skipped-tag{color:var(--warn);font-weight:700;font-size:.85rem;margin-left:8px}
+
+/* 總覽 */
+.ov{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:10px 0 0}
+.ov[hidden]{display:none}
+.tile{all:unset;cursor:pointer;text-align:center;font-weight:700;font-size:.85rem;padding:6px 0;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--muted)}
+.tile.ans{background:var(--stampbg);border-color:var(--stamp);color:var(--stamp)}
+.tile.skp{border-style:dashed;border-color:var(--warn);color:var(--warn)}
+.tile.now{outline:2px solid var(--ink);outline-offset:1px}
+.tile:focus-visible{outline:3px solid var(--accent)}
+@media (max-width:560px){.ov{grid-template-columns:repeat(5,1fr)}}
+
+/* 底部操作列 */
+.bar .wrap{gap:10px}
+.ghost{all:unset;cursor:pointer;padding:9px 14px;border-radius:12px;border:1.5px solid var(--line);font-weight:700;color:var(--ink);white-space:nowrap}
+.ghost[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
+.ghost:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (max-width:560px){.bar .prog{display:none}.ghost{padding:9px 10px}.cta{padding:10px 14px}}
+
+/* 預測 */
+.pred{margin-top:40px}
+.pred h2{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:900}
+.pchoices{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px}
+.pbtn{all:unset;cursor:pointer;padding:10px 18px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);font-weight:700}
+.pbtn[aria-pressed="true"]{border-color:var(--stamp);background:var(--stampbg);color:var(--stamp)}
+.pbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.pq{border-top:1px solid var(--line);padding:14px 0}
+.pq .snip{color:var(--muted);font-size:.93rem;margin:4px 0 8px}
+
+/* 開票 */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+@media (max-width:640px){.board{grid-template-columns:1fr}}
+.lane{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;min-height:150px}
+.lane.h{border-top:6px solid var(--h)}.lane.z{border-top:6px solid var(--z)}
+.lane h3{font-size:1.25rem;display:flex;justify-content:space-between;align-items:baseline}
+.lane h3 span{font-family:var(--sans);font-size:1.6rem;font-weight:700}
+.tally{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tally svg{width:34px;height:34px}
+.lane.h .tally path{stroke:var(--h)}.lane.z .tally path{stroke:var(--z)}
+.callout{min-height:3.4em;margin:16px 0 8px;font-size:1.05rem;text-align:center}
+.callout b{font-family:var(--serif)}
+.nvote{font-size:.9rem;color:var(--muted);text-align:center}
+
+/* 直覺 vs 實際 */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;text-align:center}
+.vs .big{font-family:var(--serif);font-size:1.4rem;font-weight:900}
+.vs .lbl{font-size:.85rem;color:var(--muted)}
+.vs .mid{font-size:1.6rem}
+
+/* 翻牌回顧 */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.rcard{perspective:1000px;cursor:pointer;border-radius:16px}
+.rcard:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.rin{display:grid;transition:transform .5s;transform-style:preserve-3d}
+.rcard.flip .rin{transform:rotateY(180deg)}
+.rf,.rb{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card);padding:14px 16px;font-size:.9rem;line-height:1.6}
+.rb{transform:rotateY(180deg);background:var(--soft)}
+.rf .no{font-family:var(--serif);font-weight:900;font-size:1.3rem}
+.rf .tp{font-weight:700;margin:2px 0 8px}
+.rf .hint{font-size:.78rem;color:var(--muted);margin-top:8px}
+.rb .row{display:flex;justify-content:space-between;gap:6px;margin-bottom:4px}
+.key{background:var(--stampbg);border:1.5px solid var(--stamp)}
+.card.has .opt[aria-pressed="false"]{opacity:.6}
+.card.has .opt[aria-pressed="false"]:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <h1>看不見名字的選擇</h1>
+      <p class="sub">2026 桃園市長政見盲測。20 題兩位候選人的真實政見，姓名、政黨與口號全部隱去；作答完成後才揭曉每題出處，並附上可行性、過往表現與爭議的綜合評比。</p>
+      <div class="meta">
+        <span class="chip">資料截止 2026-11-11</span>
+        <span class="chip">投票日 2026-11-28</span>
+        <span class="chip">約 8 分鐘</span>
+      </div>
+      <button class="start" id="startBtn"><svg viewBox="-30 -30 60 60" aria-hidden="true"><circle r="24" fill="none" stroke="currentColor" stroke-width="5"/><path d="M-2 -14 V14 M0 -1 L10 6" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/></svg>開始翻牌</button>
+    </div>
+    <svg class="hero-art" viewBox="0 0 320 300" role="img" aria-label="插圖：一張候選人姓名被遮住的選票，旁邊是一枚圈選章">
+      <ellipse cx="160" cy="286" rx="132" ry="9" fill="var(--line)"/>
+      <g transform="rotate(-4 150 150)">
+        <rect x="44" y="34" width="196" height="236" rx="10" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/>
+        <rect x="44" y="34" width="196" height="34" rx="10" fill="var(--soft)"/>
+        <line x1="44" y1="68" x2="240" y2="68" stroke="var(--ink)" stroke-width="3"/>
+        <line x1="142" y1="68" x2="142" y2="270" stroke="var(--ink)" stroke-width="2"/>
+        <line x1="44" y1="169" x2="240" y2="169" stroke="var(--ink)" stroke-width="2"/>
+        <circle cx="93" cy="104" r="22" fill="var(--soft)" stroke="var(--ink)" stroke-width="2"/>
+        <circle cx="191" cy="104" r="22" fill="var(--soft)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="93" y="112" text-anchor="middle" font-family="var(--serif)" font-size="22" font-weight="700" fill="var(--ink)">A</text>
+        <text x="191" y="112" text-anchor="middle" font-family="var(--serif)" font-size="22" font-weight="700" fill="var(--ink)">B</text>
+        <rect x="62" y="138" width="62" height="16" rx="8" fill="var(--ink)"/>
+        <rect x="160" y="138" width="62" height="16" rx="8" fill="var(--ink)"/>
+        <text x="93" y="150" text-anchor="middle" font-size="12" fill="var(--paper)" font-weight="700">？？？</text>
+        <text x="191" y="150" text-anchor="middle" font-size="12" fill="var(--paper)" font-weight="700">？？？</text>
+        <g transform="translate(93 218) rotate(-12)">
+          <circle r="26" fill="none" stroke="var(--stamp)" stroke-width="4"/>
+          <path d="M-2 -16 V16 M0 -2 L11 5" stroke="var(--stamp)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(262 196) rotate(18)">
+        <rect x="-11" y="-62" width="22" height="46" rx="9" fill="var(--accent)"/>
+        <rect x="-18" y="-18" width="36" height="14" rx="4" fill="var(--ink)"/>
+        <rect x="-15" y="-4" width="30" height="8" rx="2" fill="var(--stamp)"/>
+      </g>
+    </svg>
+  </header>
+
+  <section class="panel" aria-labelledby="howto-h">
+    <h2 id="howto-h" style="font-size:1.25rem;margin-bottom:14px">怎麼玩</h2>
+    <div class="howto">
+      <div><h3>一次翻一張牌</h3><p>每張牌有 A、B 兩位候選人的主張，順序已隨機打亂。兩者都可接受選「C 都可以」，都不認同選「D 都不要」。拿不定主意可以先跳過。</p></div>
+      <div><h3>集滿七枚章</h3><p>答完一章就能在集章冊蓋上一枚紀念章。重要度分普通、在意、非常在意三級，預設「在意」，揭曉時會依此加權。</p></div>
+      <div><h3>先猜再開票</h3><p>有些政見辨識度高，猜得出是誰就誠實勾選。揭曉前要先憑直覺猜一次，再看開票結果和你的直覺差多少。</p></div>
+    </div>
+    <p class="note" style="margin:14px 0 0">鍵盤：<span class="kbd">A</span><span class="kbd">B</span><span class="kbd">C</span><span class="kbd">D</span> 作答，<span class="kbd">1</span><span class="kbd">2</span><span class="kbd">3</span> 重要度，<span class="kbd">K</span> 猜得出，<span class="kbd">→</span> 翻下一張，<span class="kbd">←</span> 上一張。</p>
+  </section>
+
+  <section class="panel commit" aria-labelledby="commit-h">
+    <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="flex:none"><rect x="8" y="19" width="28" height="20" rx="4" fill="none" stroke="var(--ink)" stroke-width="2.5"/><path d="M14 19v-5a8 8 0 0 1 16 0v5" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="22" cy="29" r="3" fill="var(--accent)"/></svg>
+    <div style="min-width:0">
+      <h2 id="commit-h" style="font-size:1.1rem">答案已預先封存</h2>
+      <p class="note" style="margin:4px 0 0">每題 A、B 對應誰，連同一段隨機鹽值，已計算出下方 SHA-256 雜湊。揭曉時會公布原文，你可以一鍵驗算，確認對應關係從出題後就沒有被改動。</p>
+      <code id="commitHash"></code>
+      <p class="note" style="margin-top:8px">請勿檢視網頁原始碼，否則盲測就失效了。</p>
+    </div>
+  </section>
+
+  <section id="game" aria-label="作答">
+    <div class="book" id="book">
+      <div class="book-h"><h2>集章冊</h2><span id="bookCnt">0 / 7 枚</span></div>
+      <ol id="bookList"></ol>
+    </div>
+    <div class="table-top">
+      <span class="where" id="where"></span>
+      <button class="ghost" id="ovBtn" aria-expanded="false" aria-controls="ov">總覽 20 張</button>
+    </div>
+    <div class="ov" id="ov" hidden></div>
+    <div class="stage"><article class="card" id="card" aria-live="polite"></article></div>
+  </section>
+
+  <section id="predict" class="pred" hidden aria-labelledby="pred-h">
+    <h2 id="pred-h">開票前，先憑直覺猜一猜</h2>
+    <p class="note">20 張牌都翻完了。揭曉之後，會比對你的直覺和實際結果差多少。</p>
+    <div class="panel">
+      <h3 style="font-size:1.1rem">你覺得自己整體比較偏向誰？</h3>
+      <div class="pchoices" id="pOverall">
+        <button class="pbtn" data-g="H" aria-pressed="false">黃世杰</button>
+        <button class="pbtn" data-g="Z" aria-pressed="false">張善政</button>
+        <button class="pbtn" data-g="E" aria-pressed="false">差不多</button>
+      </div>
+    </div>
+    <div class="panel" id="pFlagWrap">
+      <h3 style="font-size:1.1rem">你標記「猜得出」的牌：A 是誰？</h3>
+      <div id="pFlags"></div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+      <button class="cta" id="countBtn" aria-disabled="true">開票</button>
+      <button class="ghost" id="backBtn">回去修改答案</button>
+    </div>
+  </section>
+
+  <section id="count" class="pred" hidden aria-labelledby="count-h">
+    <h2 id="count-h">開票中</h2>
+    <div class="board">
+      <div class="lane h"><h3>黃世杰<span id="cH">0</span></h3><div class="tally" id="tH"></div></div>
+      <div class="lane z"><h3>張善政<span id="cZ">0</span></h3><div class="tally" id="tZ"></div></div>
+    </div>
+    <p class="callout" id="callout" aria-live="polite"></p>
+    <p class="nvote" id="nvote"></p>
+    <div style="text-align:center;margin-top:10px"><button class="ghost" id="fastBtn">直接看結果</button></div>
+  </section>
+
+  <section id="result" aria-live="polite"></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    本頁依兩位候選人公開發表的政見、市府施政說明與媒體報導整理，僅供個人理解政策差異使用，不構成投票建議。政見以候選人正式公布及中選會選舉公報為準。
+  </footer>
+  <div class="spacer"></div>
+</div>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <button class="ghost" id="prevBtn">上一張</button>
+    <span id="progTxt" style="font-weight:700;white-space:nowrap">0 / 20</span>
+    <div class="prog" aria-hidden="true"><i id="progBar"></i></div>
+    <button class="ghost" id="skipBtn">先跳過</button>
+    <button class="cta" id="nextBtn">翻下一張</button>
+  </div>
+</div>
+
+<template id="phase2">
+  <div class="r-hero">
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <line x1="60" y1="18" x2="60" y2="100" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="20" y1="34" x2="100" y2="34" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M8 70 L20 34 L32 70 Z" fill="none" stroke="var(--h)" stroke-width="3"/>
+      <path d="M4 70 a16 10 0 0 0 32 0z" fill="var(--h)"/>
+      <path d="M88 70 L100 34 L112 70 Z" fill="none" stroke="var(--z)" stroke-width="3"/>
+      <path d="M84 70 a16 10 0 0 0 32 0z" fill="var(--z)"/>
+      <rect x="40" y="98" width="40" height="8" rx="4" fill="var(--ink)"/>
+      <circle cx="60" cy="18" r="6" fill="var(--accent)"/>
+    </svg>
+    <div>
+      <h2>盲測揭曉</h2>
+      <p class="note" style="margin:6px 0 0">依號次：<span class="tagH">1 號 黃世杰</span>（民進黨，前立委、前法務部政務次長）；<span class="tagZ">2 號 張善政</span>（國民黨，現任市長，尋求連任）。顏色僅為區分用，刻意避開兩黨代表色。</p>
+    </div>
+  </div>
+
+  <section class="sec" aria-labelledby="s0">
+    <h2 id="s0">直覺 vs. 實際</h2>
+    <div class="panel vs">
+      <div><div class="lbl">你的直覺</div><div class="big" id="gOverall"></div></div>
+      <div class="mid" id="gMark"></div>
+      <div><div class="lbl">開票結果</div><div class="big" id="aOverall"></div></div>
+    </div>
+    <p class="note" id="gFlags"></p>
+  </section>
+
+  <section class="sec" aria-labelledby="s1">
+    <h2 id="s1">一、你的政見傾向</h2>
+    <div class="kpis">
+      <div class="panel kpi" style="margin:0">
+        <h3>全部 20 題（加權）</h3>
+        <div class="verdict" id="vAll"></div>
+        <div class="split" id="barAll"></div>
+        <p class="note" id="nAll" style="margin:0"></p>
+      </div>
+      <div class="panel kpi" style="margin:0">
+        <h3>排除「猜得出是誰」的題目</h3>
+        <div class="verdict" id="vEx"></div>
+        <div class="split" id="barEx"></div>
+        <p class="note" id="nEx" style="margin:0"></p>
+      </div>
+    </div>
+    <div class="legend" style="margin-top:10px"><span><i class="dot" style="background:var(--h)"></i>黃世杰</span><span><i class="dot" style="background:var(--z)"></i>張善政</span><span><i class="dot" style="background:var(--soft);border:1px solid var(--line)"></i>D 都不要</span></div>
+
+    <h3 style="font-size:1.15rem;margin:26px 0 8px">分領域傾向</h3>
+    <div class="tbl"><table id="domTbl"><thead><tr><th>領域</th><th style="width:55%">加權分布</th><th>題數</th></tr></thead><tbody></tbody></table></div>
+
+    <h3 style="font-size:1.15rem;margin:26px 0 8px">關鍵牌</h3>
+    <p class="note" id="pivot"></p>
+
+    <h3 style="font-size:1.15rem;margin:26px 0 8px">翻牌回顧</h3>
+    <p class="note">點一下牌面就能翻到背面，看 A、B 各是誰與出處。外框為印泥色的是關鍵牌。「同向不同量」代表兩人方向一致、只差程度或做法。</p>
+    <div class="rgrid" id="rgrid"></div>
+    <p class="warnbox" style="margin-top:14px">【推論】這份統計只反映你在這 20 個面向上「比較喜歡哪種寫法」。它無法反映候選人的執行力、團隊、誠信，也無法涵蓋未入題的議題。題目由我挑選與改寫，選題本身就是一種框架，請把結果當成自我檢視的起點，而非結論。</p>
+  </section>
+
+  <section class="sec" aria-labelledby="s2">
+    <h2 id="s2">二、政策可行性與財政約束</h2>
+    <p class="note">【證據】桃園市 116 年度總預算歲出 1,872.77 億元，社福支出 350.58 億元，歲入歲出差短 68.97 億元（<a href="https://udn.com/news/story/7324/9744387" target="_blank" rel="noopener">聯合新聞網，2026-09</a>）。審計處的 114 年度決算審核指出，整體收支短絀約 124 億元，自有財源僅占歲入約 45%（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5525481" target="_blank" rel="noopener">自由時報，2026-08</a>）。下表以此為基準檢視大型政見。</p>
+    <div class="tbl"><table>
+      <thead><tr><th>政見</th><th>提出者</th><th>經費與權限</th><th>主要風險</th><th>等級</th></tr></thead>
+      <tbody>
+        <tr><td>敬老卡每月 1,200 點、全年累積</td><td><span class="pill pH">黃</span></td><td>市府社會局在議會試算，若全面實施每年約需 70 多億元（<a href="https://www.nownews.com/news/6861271" target="_blank" rel="noopener">NOWnews</a>）；黃陣營稱已精算，但未公開數字（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>）。市府自主權限內。</td><td>【推論】以 72 億元計約占歲出 3.8%。累積制會產生大量未用點數的潛在負債。試算來自對手執政的市府，屬利害關係方估算。</td><td><span class="ev e3">財源未公開</span></td></tr>
+        <tr><td>補助 0–12 歲與 65 歲以上健保費</td><td><span class="pill pH">黃</span></td><td>雙方都未公布年度經費。市府主張應由中央全國一致辦理（<a href="https://udn.com/news/story/124652/9596007" target="_blank" rel="noopener">聯合新聞網</a>）。報導指出，桃園已有補助長者健保自付額的做法（<a href="https://udn.com/news/story/124652/9596278" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【資料不足，無法確認】既有長者補助的條件與金額，以及擴大後的新增成本。市府稱中央常以「非法定社福」扣減補助款。</td><td><span class="ev e4">資料不足</span></td></tr>
+        <tr><td>市營公車／績效補助</td><td><span class="pill pH">黃</span></td><td>主張必要時由市府直營（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>），但未公開營運成本與時程。</td><td>【推論】需要成立營運主體、購車與招募駕駛；駕駛短缺是業界的共同瓶頸，直營不一定能解決。</td><td><span class="ev e3">細節未公開</span></td></tr>
+        <tr><td>市立醫院（一總院加三分院）</td><td><span class="pill pZ">張</span></td><td>上百億元，八德總院待都市計畫變更；總預算與編列年限未見完整說明（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>）。</td><td>【推論】醫院的瓶頸常在醫師人力與營運夥伴。同區的清大醫院 BOT 案曾因無人投標而轉型（<a href="https://udn.com/news/story/124652/9699801" target="_blank" rel="noopener">聯合新聞網</a>），顯示招商風險真實存在。</td><td><span class="ev e3">年限未定</span></td></tr>
+        <tr><td>2030 年社宅 1 萬戶</td><td><span class="pill pZ">張</span></td><td>市府稱決標與發包已達 1 萬戶規模；審計處示警自償率下降、利息負擔加重（<a href="https://udn.com/news/story/7324/9713963" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【推論】數量目標可望達成，但長期財務壓力由後續市府承擔。</td><td><span class="ev e1">進度可查</span></td></tr>
+        <tr><td>可負擔住宅（約市價六成）</td><td><span class="pill pZ">張</span></td><td>容積獎勵取得房源，初估 300 多戶；自治條例議會已三讀，行政院以案情複雜為由延長核定期限（<a href="https://tw.news.yahoo.com/%E6%A1%83%E5%9C%92%E5%8F%AF%E8%B2%A0%E6%93%94%E5%AE%85%E6%8E%80%E8%A8%8E%E8%AB%96-%E9%BB%83%E4%B8%96%E6%9D%B0-%E4%B8%8D%E8%A9%B2%E6%B7%AA%E5%AE%A3%E5%82%B3-025710406.html" target="_blank" rel="noopener">Yahoo 新聞</a>）。</td><td>【推論】受益戶數有限；產權與轉售限制的法律設計仍待中央確認。</td><td><span class="ev e3">待中央核定</span></td></tr>
+        <tr><td>航空城高階 IC 載板專區</td><td><span class="pill pZ">張</span></td><td>40 公頃，目標 2028 年進場整地（<a href="https://www.ettoday.net/news/20260915/3238127.htm" target="_blank" rel="noopener">ETtoday</a>）；地方里長要求公開用水、用電、廢水等數據並依法辦理公聽會（<a href="https://udn.com/news/story/124652/9784031" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【推論】需要都市計畫變更與環評，在地信任是主要變數。</td><td><span class="ev e3">程序未完成</span></td></tr>
+        <tr><td>不核發 SRF 電廠營運許可</td><td><span class="pill pZ">張</span></td><td>市府撤銷入園許可後，經濟部訴願會撤銷市府處分，業者也請求國賠，行政救濟尚未落幕（<a href="https://udn.com/news/story/124652/9564904" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【推論】若行政救濟敗訴，可能產生賠償責任。</td><td><span class="ev e3">法律風險</span></td></tr>
+        <tr><td>捷運綠線北段年底通車</td><td><span class="pill pZ">張</span></td><td>競辦 10 月中說明整體進度 73.2%（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>）；市長也表示最終仍待中央履勘（<a href="https://udn.com/news/story/124652/9542025" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【預測】年底能否通車，將是投票後最先被檢驗的承諾之一。</td><td><span class="ev e2">時程待驗</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s3">
+    <h2 id="s3">三、承諾達成率與質詢、備詢紀錄（依角色分軌）</h2>
+    <p class="warnbox">兩人在 2022–2026 年的角色不同，同一把尺不能直接比較。市長沒有「質詢率」，只有在議會「備詢」；立委有質詢率，但這段期間的逐會期數據本次查無。下表只列可查證的資料。</p>
+    <div class="twocol" style="margin-top:14px">
+      <div class="cand z">
+        <h3>張善政</h3>
+        <div class="role">行政首長路線：科技部長、行政院長，2022 年當選桃園市長；未曾擔任民意代表（<a href="https://ctee.com.tw/people/interview/746503.html" target="_blank" rel="noopener">工商時報</a>）</div>
+        <ul>
+          <li>【證據・自評】本人受訪表示，上次競選提出 238 項政見，九成五「已完成或推動中」（<a href="https://udn.com/news/story/124652/9542025" target="_blank" rel="noopener">聯合新聞網，2026-06</a>）。這是自評，「推動中」的定義很寬，並非第三方稽核。</li>
+          <li>【證據】各家滿意度調查結果分歧：遠見 2026 年調查 62.3%，六都第五（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5451312" target="_blank" rel="noopener">自由時報</a>）；TVBS 2025 年 12 月調查 61% 滿意，經濟日報幸福指數調查 75.7%、六都第一（<a href="https://news.tvbs.com.tw/politics/3091276" target="_blank" rel="noopener">TVBS</a>）。</li>
+          <li>【證據・備詢】議員在總質詢時遞交辯論邀請，他當場拒收，表示登記時勾選的是政見發表會（<a href="https://news.ltn.com.tw/news/Taoyuan/breakingnews/5581412" target="_blank" rel="noopener">自由時報</a>）；議員要求公布首長宿舍水電費，他表示不會公布，市府稱涉及個資須依法處理（<a href="https://udn.com/news/story/6656/9768328" target="_blank" rel="noopener">聯合新聞網</a>）。</li>
+        </ul>
+      </div>
+      <div class="cand h">
+        <h3>黃世杰</h3>
+        <div class="role">民代加政務官路線：桃園市府參議、第 10 屆區域立委（桃園第 2 選區）、法務部政務次長</div>
+        <ul>
+          <li>【證據】獲公督盟評為立法院第 10 屆第 2 會期內政委員會「優秀立委」（<a href="https://www.mirrormedia.mg/story/20210413edi022" target="_blank" rel="noopener">鏡週刊，2021</a>）。需要注意的是，公督盟近期的優秀名單全為民進黨籍，原因是藍白黨團拒絕揭露助理資訊（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5407150" target="_blank" rel="noopener">自由時報，2026-04</a>），跨黨可比性有限。</li>
+          <li>【證據】2024 年立委選舉尋求連任，以一千多票之差落敗，地方普遍認為 SRF 議題是關鍵（<a href="https://www.nownews.com/news/6445830" target="_blank" rel="noopener">NOWnews</a>）。</li>
+          <li>【資料不足，無法確認】2022–2024 年各會期的質詢率、提案數，以及次長任內的備詢與政策成果，本次搜尋未找到系統性資料。建議至立法院議事系統或公督盟網站查詢第 10 屆第 5–8 會期的資料。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s4">
+    <h2 id="s4">四、2022–2026 四年相對表現</h2>
+    <div class="tbl"><table>
+      <thead><tr><th style="width:16%">面向</th><th style="width:42%"><span class="tagZ">張善政</span>（市長任內）</th><th><span class="tagH">黃世杰</span>（立委至 2024 年，其後任次長）</th></tr></thead>
+      <tbody>
+        <tr><td>交通</td><td>【證據・市府說法】交通死傷連續 3 年下降；公共運輸使用率從 111 年的 9.1% 升至 113 年的 12.9%（<a href="https://news.cts.com.tw/cna/local/202607/202607273060384.html" target="_blank" rel="noopener">華視／中央社</a>）。<br>【證據・對手批評】黃陣營稱 2025 年每十萬人交通死傷數仍是北北基桃最高（<a href="https://www.nownews.com/news/6859976" target="_blank" rel="noopener">NOWnews</a>）。</td><td>此期間不是地方首長，沒有可直接對應的市政成果。已主張的交通治理方向見盲測第 1–3 題。</td></tr>
+        <tr><td>重大建設</td><td>【證據】綠線北段整體進度 73.2%；航空城 I 基地動土，投資逾 500 億元（<a href="https://n.yam.com/Article/20261022102012" target="_blank" rel="noopener">蕃新聞</a>）。張認為北機廠前期幾乎沒有進度，是由現任團隊追回（<a href="https://udn.com/news/story/124652/9813378" target="_blank" rel="noopener">聯合新聞網</a>）。<br>【證據・對手批評】黃指出綠線延伸中壢段歷經 9 次流標，經費從 97 億元增至 255 億元（<a href="https://udn.com/news/story/124652/9792945" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【證據】立委時期曾提案「廢棄物發電設備應設置開發協助金」，後來成為 SRF 爭議的攻防焦點（<a href="https://tw.news.yahoo.com/%E9%BB%83%E4%B8%96%E6%9D%B0%E6%8A%AB%E7%B6%A0%E8%A2%8D%E5%8F%83%E9%81%B8%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7-%E5%87%8C%E6%BF%A4-%E6%87%89%E5%85%88%E7%82%BAsrf%E9%9B%BB%E5%BB%A0%E6%A1%88%E5%90%91%E5%B8%82%E6%B0%91%E9%81%93%E6%AD%89-053506394.html" target="_blank" rel="noopener">Yahoo 新聞</a>）。</td></tr>
+        <tr><td>住宅</td><td>【證據】社宅已決標達 1 萬戶規模，但黃陣營指出「任內啟動且完工」的戶數為 0；市府回應社宅從規劃到動工需 5–7 年（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>）。</td><td>【資料不足】立委任內與住宅相關的具體立法成果，本次未查得。</td></tr>
+        <tr><td>醫療</td><td>【證據】推動八德市立醫院；清大醫院 BOT 案因無人投標，改朝科教館方向（<a href="https://udn.com/news/story/124652/9699801" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>【證據・市府批評】市府質疑黃從政多年，未見具體改善桃園醫療的作為（<a href="https://www.setn.com/news/1891554" target="_blank" rel="noopener">三立新聞網</a>）。</td></tr>
+        <tr><td>財政</td><td>【證據】116 年度預算差短較前一年縮減 48 億元（<a href="https://www.ctee.com.tw/news/20260910701737-431204" target="_blank" rel="noopener">工商時報</a>）；但 114 年度決算整體收支短絀約 124 億元（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5525481" target="_blank" rel="noopener">自由時報</a>）。</td><td>不適用（非地方首長）。</td></tr>
+        <tr><td>中央與地方</td><td>常把航空城補償、SRF、鐵路地下化經費等爭議歸因於中央（<a href="https://udn.com/news/story/124652/9542025" target="_blank" rel="noopener">聯合新聞網</a>）。</td><td>主打與中央合作，例如配合「桃竹苗大矽谷」計畫（<a href="https://udn.com/news/story/124652/9792945" target="_blank" rel="noopener">聯合新聞網</a>）。【推論】優點是中央資源較易取得；代價是在中央與地方利益衝突時，較難站在地方這一邊。</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s5">
+    <h2 id="s5">五、代表事蹟與爭議</h2>
+    <p class="note">每則都標明消息來源類型與目前狀態。「對手指控」不等於事實成立；兩人採用相同的納入門檻：有具名來源，且屬於與公職角色相關的事件。</p>
+    <div class="tbl"><table>
+      <thead><tr><th>人物</th><th>事件</th><th>來源類型</th><th>狀態與當事方回應</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tagZ">張善政</span></td><td>面對 AIT 關切，仍堅持不核發 SRF 電廠營運許可（<a href="https://n.yam.com/Article/20261022102012" target="_blank" rel="noopener">蕃新聞</a>）</td><td><span class="pill pN">媒體報導</span><span class="pill pN">行政救濟</span></td><td>被支持者視為代表性事蹟；經濟部兩度撤銷市府處分，業者請求國賠，訴訟未決。</td></tr>
+        <tr><td><span class="tagZ">張善政</span></td><td>拒絕參加市長辯論，只參加法定政見發表會</td><td><span class="pill pN">媒體報導</span></td><td>張表示不喜歡口水戰；黃陣營持續邀辯（<a href="https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/" target="_blank" rel="noopener">報新聞</a>）。</td></tr>
+        <tr><td><span class="tagZ">張善政</span></td><td>航空城載板專區被質疑違背「三低一高」原則</td><td><span class="pill pN">對手質疑</span><span class="pill pN">地方里長聲明</span></td><td>市府稱技術已進步，且總統也支持 PCB 專區（<a href="https://udn.com/news/story/124652/9764975" target="_blank" rel="noopener">聯合新聞網</a>）；12 位里長要求公開數據（<a href="https://udn.com/news/story/124652/9784031" target="_blank" rel="noopener">聯合新聞網</a>）。</td></tr>
+        <tr><td><span class="tagZ">張善政</span></td><td>被批評「心不在桃園」，議員要求公開宿舍水電費</td><td><span class="pill pN">對手指控</span></td><td>張回應對方是找不到議題才這樣說（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5611491" target="_blank" rel="noopener">自由時報</a>）；宿舍水電費未公布，市府稱依法處理。</td></tr>
+        <tr><td><span class="tagZ">張善政</span></td><td>科技執法罰款 4 年增加 26 億元，被質疑淪為「印鈔機」</td><td><span class="pill pN">議員質詢</span></td><td>警方稱 2025 年取締件數減少約一成，設有科技執法的路口事故也下降（<a href="https://www.ettoday.net/news/20260513/3165547.htm" target="_blank" rel="noopener">ETtoday</a>）。</td></tr>
+        <tr><td><span class="tagH">黃世杰</span></td><td>出席農田水利署活動，現場官員喊「凍蒜」並發放雞蛋禮盒，被告發涉及賄選</td><td><span class="pill pN">對手告發</span></td><td>國民黨議員向地檢署告發（<a href="https://udn.com/news/story/7320/9683633" target="_blank" rel="noopener">聯合新聞網</a>）；黃陣營稱這是例行公開活動，黃本人並未送蛋（<a href="https://udn.com/news/story/124652/9777640" target="_blank" rel="noopener">聯合新聞網</a>）。【資料不足】偵查結果尚未公開。</td></tr>
+        <tr><td><span class="tagH">黃世杰</span></td><td>SRF 立場與「開發協助金」提案爭議；他對涂權吉的告訴獲不起訴處分確定</td><td><span class="pill pN">對手陣營說法</span><span class="pill pN">司法結果</span></td><td>不起訴的經過由國民黨議員轉述（<a href="https://tw.news.yahoo.com/%E9%BB%83%E4%B8%96%E6%9D%B0%E6%8A%AB%E7%B6%A0%E8%A2%8D%E5%8F%83%E9%81%B8%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7-%E5%87%8C%E6%BF%A4-%E6%87%89%E5%85%88%E7%82%BAsrf%E9%9B%BB%E5%BB%A0%E6%A1%88%E5%90%91%E5%B8%82%E6%B0%91%E9%81%93%E6%AD%89-053506394.html" target="_blank" rel="noopener">Yahoo 新聞</a>）；黃陣營稱他多年來立場未曾改變（<a href="https://news.ltn.com.tw/news/Taoyuan/breakingnews/5602431" target="_blank" rel="noopener">自由時報</a>）。</td></tr>
+        <tr><td><span class="tagH">黃世杰</span></td><td>福利政見被批評「未交代財源」</td><td><span class="pill pN">市府批評</span></td><td>市府新聞處批評政見流於口號（<a href="https://www.cna.com.tw/news/aloc/202607270257.aspx" target="_blank" rel="noopener">中央社</a>）；黃陣營稱政見經過預算精算。</td></tr>
+        <tr><td><span class="tagH">黃世杰</span></td><td>主動邀辯，並在選委會登記時勾選辯論</td><td><span class="pill pN">媒體報導</span></td><td>被視為代表性作為；但辯論最終未成局（<a href="https://news.ltn.com.tw/news/Taoyuan/breakingnews/5581412" target="_blank" rel="noopener">自由時報</a>）。</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s6">
+    <h2 id="s6">六、未來四年值得盯住的指標</h2>
+    <p>【預測】無論誰當選，以下幾項最能在任期內被客觀檢驗：綠線北段是否在年底或明年初通車；載板專區的環評與都市計畫變更能否完成；可負擔住宅能否通過中央核定並實際交屋；敬老卡或健保補助的預算如何編列，又排擠了哪些項目。其中財政是最硬的約束：審計報告顯示自有財源不到一半（<a href="https://news.ltn.com.tw/news/politics/breakingnews/5525481" target="_blank" rel="noopener">自由時報</a>），任何大型福利加碼，都要看中央補助與統籌分配稅款的走向。</p>
+  </section>
+
+  <section class="sec" aria-labelledby="s7">
+    <h2 id="s7">七、驗證封存答案</h2>
+    <p class="note">以下是出題時封存的原文。按下驗算後，瀏覽器會在本機重新計算 SHA-256，並與頁首公布的雜湊比對。</p>
+    <p class="mono panel" id="keyPlain" style="margin:8px 0"></p>
+    <div class="verify"><button class="btn2" id="verifyBtn">驗算雜湊</button><span id="verifyOut" class="note"></span></div>
+  </section>
+
+  <section class="sec" aria-labelledby="s8">
+    <h2 id="s8">方法與限制</h2>
+    <ul class="note">
+      <li>政見來源以候選人公開發言、競辦新聞稿、市府施政說明與主流媒體報導為主；中選會選舉公報本次未取得全文，【資料不足】。</li>
+      <li>現任者的「政見」有部分是市府既有計畫的延伸，挑戰者則多為新主張，兩者具體程度天生不對等，這也是設計「猜得出」選項的原因。</li>
+      <li>七個領域題數為 3/3/3/2/4/2/3：居住與環保領域中，兩人都有明確且可對照主張的議題較少，因此未硬湊題目。</li>
+      <li>引述市府數據時，市府同時是利害關係方；引述對手批評時，同樣標示為對手說法。</li>
+    </ul>
+  </section>
+
+  <div class="reset"><button class="btn2" id="resetBtn">清除作答，重新測驗</button></div>
+</template>
+
+<script>
+(function(){
+  "use strict";
+  // ===== 封存資料 =====
+  var COMMIT = "6e19b50ed9456cac84afe0b3f643c209a3e97beb3ca062bb88a26070e10a25f4";
+  var KEY_B64 = "ZTExMDhiNzljOTQ4MTI5YT10bGFzfFo9QixIPUE6MDJRfEg9QixaPUE6OTFRfEg9QixaPUE6ODFRfEg9QixaPUE6NzFRfFo9QixIPUE6NjFRfFo9QixIPUE6NTFRfEg9QixaPUE6NDFRfEg9QixaPUE6MzFRfEg9QixaPUE6MjFRfFo9QixIPUE6MTFRfEg9QixaPUE6MDFRfEg9QixaPUE6OTBRfFo9QixIPUE6ODBRfFo9QixIPUE6NzBRfEg9QixaPUE6NjBRfFo9QixIPUE6NTBRfFo9QixIPUE6NDBRfFo9QixIPUE6MzBRfFo9QixIPUE6MjBRfEg9QixaPUE6MTBR";
+
+  var DOMAINS = [
+    {id:"traffic", intro:"軌道、公車與交通執法，三種不同的施政節奏。", name:"交通建設", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><rect x="12" y="6" width="28" height="34" rx="7" fill="none" stroke="var(--ink)" stroke-width="2.5"/><rect x="17" y="12" width="18" height="11" rx="2" fill="var(--soft)" stroke="var(--ink)" stroke-width="2"/><circle cx="19" cy="31" r="2.5" fill="var(--accent)"/><circle cx="33" cy="31" r="2.5" fill="var(--accent)"/><path d="M16 40 l-5 7 M36 40 l5 7" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/></svg>'},
+    {id:"care", intro:"托育、健保與青年支持，資源要先放在哪裡？", name:"托育與社福", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M8 22 h30 a0 0 0 0 1 0 0 v4 a14 12 0 0 1 -28 0 v-4z" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M38 22 c0 -10 -8 -14 -14 -14 v14" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="15" cy="44" r="4" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="33" cy="44" r="4" fill="none" stroke="var(--ink)" stroke-width="2.5"/><path d="M38 22 l6 -4" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/></svg>'},
+    {id:"elder", intro:"敬老福利、醫療量能與照護重心。", name:"高齡與醫療", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 44 C10 32 6 24 10 16 c4 -7 12 -6 16 0 c4 -6 12 -7 16 0 c4 8 0 16 -16 28z" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 26 h7 l3 -6 l4 12 l3 -6 h7" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
+    {id:"house", intro:"買得起還是租得起？兩種居住解方的先後順序。", name:"居住", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M8 24 L26 8 L44 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="13" y="22" width="26" height="22" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5"/><rect x="22" y="31" width="8" height="13" fill="var(--accent)"/></svg>'},
+    {id:"industry", intro:"產業定位、半導體、無人機與觀光。", name:"產業發展", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 44 V24 l10 6 V24 l10 6 V24 l10 6 V12 h8 v32z" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><rect x="12" y="35" width="5" height="5" fill="var(--accent)"/><rect x="22" y="35" width="5" height="5" fill="var(--accent)"/><rect x="32" y="35" width="5" height="5" fill="var(--accent)"/></svg>'},
+    {id:"env", intro:"爭議電廠與垃圾費，環境議題的處理方式。", name:"環保", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M10 42 C10 20 26 8 44 8 C44 28 32 42 10 42z" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 42 C20 30 28 24 38 16" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/></svg>'},
+    {id:"gov", intro:"府際關係、教育資源與智慧治理。", name:"市政管理", icon:'<svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 18 L26 7 L46 18z" fill="var(--soft)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 20 v18 M21 20 v18 M31 20 v18 M40 20 v18" stroke="var(--ink)" stroke-width="2.5"/><rect x="6" y="38" width="40" height="6" fill="var(--accent)"/></svg>'}
+  ];
+  // 選項已依封存順序排列（A/B 隨機）
+  var Q = [
+    {id:1,d:"traffic",t:"同向不同量",topic:"軌道建設的推進方式",a:"將軌道路網擴大為「環狀加多條放射線」的架構，同步規劃更長期、約二十條路線的第二階段藍圖。",b:"集中資源，讓既定的六條軌道路線加速完工；市長親自督導，並定期公開各標的工程進度。"},
+    {id:2,d:"traffic",t:"方向對立",topic:"公車服務怎麼改",a:"由市府主導、依生活圈重整路網，改採績效導向補助；業者長期脫班時，不排除由市府直營。",b:"引進更多民營客運業者並補足駕駛人力，搭配幹線路網與 AI 號誌，提升既有公車服務。"},
+    {id:3,d:"traffic",t:"同向不同量",topic:"科技執法",a:"先檢討道路設計與標線再設點；定期公開每處的設置理由與成效，新設點給予較長的勸導與通知期。",b:"依事故熱點與違規數據設點，搭配宣導期與手機 App 推播提醒，以交通死傷下降作為核心指標。"},
+    {id:4,d:"care",t:"同向不同量",topic:"托育量能",a:"建立整合公私托育空缺、收費與評鑑的即時查詢地圖，以區域補助補足缺口，並設專責團隊輔導企業自設托育。",b:"擴充公共及準公共托育，把家長每月自付差額壓到約 1,500 元，並由專責婦幼機關整合孕期到成長的支持。"},
+    {id:5,d:"care",t:"方向對立",topic:"兒少與長者健保費",a:"由市府全面補助 0–12 歲兒童及 65 歲以上長者的健保費，減輕「上有老、下有小」的家庭負擔。",b:"老幼健保費的全面補助應由中央全國一致辦理；地方資源優先投入免費午餐、教科書與學童鮮乳。"},
+    {id:6,d:"care",t:"不同重點",topic:"家庭與青年支持",a:"支持重點放在生育端：凍卵營養金、孕婦專車、孕前與新生兒篩檢，以及產後憂鬱的心理諮商補助。",b:"支持重點放在就業端：青年入職資源包、實習交通補助與轉正獎勵、心理諮商加碼 3 次，以及 AI 算力共享。"},
+    {id:7,d:"elder",t:"方向對立",topic:"敬老愛心卡",a:"提高為每月 1,200 點並改為全年累積、不歸零，使用範圍擴大到醫療、交通與更多生活消費。",b:"維持每月 800 點、不累積，以鼓勵長者每個月出門；另新增農會消費、醫療補助、肌力課程等用途。"},
+    {id:8,d:"elder",t:"方向對立",topic:"補足醫療量能的方式",a:"引進醫學中心合作，設分院或特色醫療中心（癌症、兒童、高齡），並爭取第二座醫學中心。",b:"由市府投入上百億元，自建市立醫院體系：一座總院加上三座分院，補足各區醫療量能。"},
+    {id:9,d:"elder",t:"不同重點",topic:"照護政策的重心",a:"以預防與活躍老化為主：擴大肺癌篩檢、開設銀髮肌力課程，並補助預立醫療照護諮商。",b:"以照護網絡為主：兒童早療快速通道、社區心理健康、醫療與長照整合，並以住宅與通勤補助留任醫護。"},
+    {id:10,d:"house",t:"方向對立",topic:"平價購屋方案",a:"以容積獎勵換取房源，約以市價六成出售給無自有住宅、有子女的年輕家庭並限制轉售，盡速立法上路。",b:"支持協助青年購屋的理念，但須先釐清產權、信託、融資與轉售限制等法律配套，經完整審查後再推動。"},
+    {id:11,d:"house",t:"同向不同量",topic:"社會住宅與租屋",a:"加速社會住宅興建，檢討租金分級與入住機制，同時結合租金補貼與包租代管，降低租屋族負擔。",b:"以 2030 年前社會住宅 1 萬戶為目標全力興建，並視社宅為社會福利，不以成本回收為前提。"},
+    {id:12,d:"industry",t:"方向對立",topic:"機場周邊產業專區的定位",a:"規劃 40 公頃高階 IC 載板專區，認為現代製程與污染防治技術已大幅改善，應把握 AI 產業商機。",b:"堅守低污染、低耗能、低耗水、高附加價值的原則；缺乏環境配套與在地溝通的載板專區不應推動。"},
+    {id:13,d:"industry",t:"同向不同量",topic:"半導體產業用地",a:"從土地取得、交通、產業腹地、水電與教育五個面向整備科學園區三期，並擴大周邊工業區用地。",b:"爭取先進製程擴大落腳、領航跨縣市半導體走廊，新設產業園區，並協助既有園區導入 AI 智慧製程。"},
+    {id:14,d:"industry",t:"同向不同量",topic:"無人機產業",a:"由市府與多家企業簽署合作備忘錄，在地方創業基地設置無人機新創進駐與試飛場域。",b:"整合無人機、航太與國防供應鏈形成產業聚落，串聯國防研究機構，爭取國際測試驗證中心落腳。"},
+    {id:15,d:"industry",t:"不同重點",topic:"觀光發展",a:"整合全市各區的觀光資源成為串聯路線，讓觀光收益與商機真正留在在地社區。",b:"投入約 4 億元推動沿海景觀計畫，串聯海岸、漁港與休憩空間，扭轉「這裡不好玩」的印象。"},
+    {id:16,d:"env",t:"方向對立",topic:"具爭議的廢棄物衍生燃料（SRF）電廠",a:"爭議應回歸行政程序與土地使用管制依法處理；程序有問題就依程序解決，避免政治化。",b:"對仍在興建、具爭議的電廠，市府明確表態不核發營運許可，即使面臨上級機關與外部關切。"},
+    {id:17,d:"env",t:"同向不同量",topic:"垃圾費隨袋徵收",a:"明確承諾下一任期不對一般家戶推動垃圾費隨袋徵收；這項制度目前僅在試辦與蒐集意見階段。",b:"支持垃圾減量的方向，但在取得社會共識、提出完整配套之前，不貿然強制推動隨袋徵收。"},
+    {id:18,d:"gov",t:"方向對立",topic:"與中央政府的關係",a:"對影響市民健康或財政的上級政策敢於說不，並持續要求中央下放財源、承擔應負的經費責任。",b:"與中央密切協作，配合國家級跨縣市產業計畫與交通建設，以合作爭取資源、加速地方發展。"},
+    {id:19,d:"gov",t:"不同重點",topic:"教育資源配置",a:"擴大在學普惠補助：國中小免費營養午餐加量、學童鮮乳擴及國中，並補助國中小教科書費。",b:"推動未來教育的 AI 素養培育，並為學校與教師提供行政支持，減輕第一線的負擔。"},
+    {id:20,d:"gov",t:"同向不同量",topic:"智慧治理",a:"以 AI 分析交通大數據，掌握運量、壅塞熱點與服務缺口，作為路網調整與補助分配的依據。",b:"設立跨局處的智慧城鄉委員會，把 AI 號誌控制、AI 環境辨識等工具導入各局處的日常治理。"}
+  ];
+  // 各題出處（揭曉後顯示）
+  var SRC = {
+    1:{Z:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"},
+    2:{Z:"https://news.cts.com.tw/cna/local/202607/202607273060384.html",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"},
+    3:{Z:"https://udn.com/news/story/124652/9776673",H:"https://udn.com/news/story/7324/9649360"},
+    4:{Z:"https://udn.com/news/story/7324/9744387",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"},
+    5:{Z:"https://udn.com/news/story/124652/9596007",H:"https://www.cna.com.tw/news/aloc/202607270257.aspx"},
+    6:{Z:"https://udn.com/news/story/7324/9744387",H:"https://news.ltn.com.tw/news/Taoyuan/breakingnews/5610434"},
+    7:{Z:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"},
+    8:{Z:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/",H:"https://udn.com/news/story/124652/9754243"},
+    9:{Z:"https://news.nextapple.com/politics/20261106/F2B864F4B226E449245E7CE60F44DFE5",H:"https://udn.com/news/story/124652/9754243"},
+    10:{Z:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/",H:"https://cnews.com.tw/262170629a01/"},
+    11:{Z:"https://udn.com/news/story/7324/9713963",H:"https://udn.com/news/story/7324/9713963"},
+    12:{Z:"https://www.ettoday.net/news/20260915/3238127.htm",H:"https://udn.com/news/story/124652/9764975"},
+    13:{Z:"https://news.nextapple.com/politics/20261111/019BDB678B700B3BB5F02926FB3EC2C0",H:"https://news.ltn.com.tw/news/Taoyuan/breakingnews/5586851"},
+    14:{Z:"https://n.yam.com/Article/20261111654381",H:"https://news.ltn.com.tw/news/Taoyuan/breakingnews/5586851"},
+    15:{Z:"https://www.chinatimes.com/realtimenews/20261108001633-260407",H:"https://www.cna.com.tw/news/aipl/202609230177.aspx"},
+    16:{Z:"https://n.yam.com/Article/20261022102012",H:"https://udn.com/news/story/124652/9564904"},
+    17:{Z:"https://www.scooptw.com/cnews/551637/%E5%BC%B5%E5%96%84%E6%94%BF10%E5%A0%B4%E5%AF%86%E9%9B%86%E8%BC%94%E9%81%B8%E3%80%80%E6%BE%84%E6%B8%85%E8%AC%A0%E8%A8%80%E3%80%81%E9%87%8D%E7%94%B3%E9%80%A3%E4%BB%BB%E4%B8%8D%E6%8E%A8%E5%AE%B6%E6%88%B6/",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"},
+    18:{Z:"https://n.yam.com/Article/20261022102012",H:"https://udn.com/news/story/124652/9792945"},
+    19:{Z:"https://udn.com/news/story/7324/9744387",H:"https://www.cna.com.tw/news/aipl/202609230177.aspx"},
+    20:{Z:"https://news.nextapple.com/politics/20261106/F2B864F4B226E449245E7CE60F44DFE5",H:"https://www.contentplatform.info/articles/559605/%E6%A1%83%E5%9C%92%E5%B8%82%E9%95%B7%E6%94%BF%E8%A6%8B%E5%B0%8D%E7%85%A7-%E9%BB%83%E4%B8%96%E6%9D%B0%E6%95%AC%E8%80%81%E5%8D%A11200%E9%BB%9E%E6%8E%A8%E5%85%AC%E8%BB%8A%E6%94%B9%E9%9D%A9-%E5%BC%B5/"}
+  };
+  var NAME = {Z:"張善政", H:"黃世杰"};
+  var WLBL = {1:"普通", 2:"在意", 3:"非常在意"};
+  var STAMP = '<svg class="stamp" viewBox="-30 -30 60 60" aria-hidden="true"><circle r="25" fill="none" stroke="var(--stamp)" stroke-width="4"/><path d="M-2 -15 V15 M0 -1 L10 6" stroke="var(--stamp)" stroke-width="4.5" stroke-linecap="round" fill="none"/></svg>';
+  var RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function(id){ return document.getElementById(id); };
+
+  // ===== 狀態與儲存 =====
+  var LS = "ty2026-blind-v2";
+  var st = {ans:{}, guess:{}, g:null, cur:0, skip:{}};
+  try { var raw = localStorage.getItem(LS); if (raw) { var o = JSON.parse(raw); if (o && o.ans) st = Object.assign(st, o); } } catch(e) {}
+  function save(){ try { localStorage.setItem(LS, JSON.stringify(st)); } catch(e) {} }
+
+  $("commitHash").textContent = COMMIT;
+  var domIndex = {}; DOMAINS.forEach(function(d, i){ domIndex[d.id] = i; });
+  function domOf(q){ return DOMAINS[domIndex[q.d]]; }
+  function isAns(q){ return !!(st.ans[q.id] && st.ans[q.id].c); }
+  function nAns(){ return Q.filter(isAns).length; }
+  function chapQs(did){ return Q.filter(function(q){ return q.d === did; }); }
+  function chapFull(did){ return chapQs(did).every(isAns); }
+
+  // ===== 集章冊 =====
+  var fullSeen = {};
+  DOMAINS.forEach(function(d, i){
+    fullSeen[d.id] = chapFull(d.id);
+    var li = document.createElement("li");
+    li.innerHTML = '<button class="slot" id="slot-' + d.id + '" aria-label="第 ' + (i+1) + ' 章 ' + d.name + '"><span class="ring">' + d.icon + '</span><span class="nm">' + d.name + '</span><span class="cnt"></span></button>';
+    $("bookList").appendChild(li);
+    li.querySelector("button").addEventListener("click", function(){
+      var qs = chapQs(d.id), t = qs.find(function(q){ return !isAns(q); }) || qs[0];
+      go(Q.indexOf(t));
+    });
+  });
+  function paintBook(){
+    var full = 0;
+    DOMAINS.forEach(function(d){
+      var qs = chapQs(d.id), k = qs.filter(isAns).length, el = $("slot-" + d.id);
+      el.querySelector(".cnt").textContent = k + "/" + qs.length;
+      var f = k === qs.length; if (f) full++;
+      el.classList.toggle("full", f);
+      el.classList.toggle("cur", Q[st.cur].d === d.id);
+      if (f && !fullSeen[d.id]) {
+        el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop");
+        toast("集到第 " + (domIndex[d.id] + 1) + " 枚章：" + d.name);
+      }
+      fullSeen[d.id] = f;
+    });
+    $("bookCnt").textContent = full + " / 7 枚";
+  }
+
+  // ===== 總覽 =====
+  function paintOv(){
+    var ov = $("ov"); ov.innerHTML = "";
+    Q.forEach(function(q, i){
+      var b = document.createElement("button");
+      b.className = "tile" + (isAns(q) ? " ans" : (st.skip[q.id] ? " skp" : "")) + (i === st.cur ? " now" : "");
+      b.textContent = q.id;
+      b.setAttribute("aria-label", "第 " + q.id + " 張" + (isAns(q) ? "，已作答" : st.skip[q.id] ? "，已跳過" : ""));
+      b.addEventListener("click", function(){ go(i); });
+      ov.appendChild(b);
+    });
+  }
+  $("ovBtn").addEventListener("click", function(){
+    var ov = $("ov"), open = ov.hidden;
+    ov.hidden = !open; this.setAttribute("aria-expanded", String(open));
+  });
+
+  // ===== 牌面 =====
+  var card = $("card");
+  function render(){
+    var q = Q[st.cur], d = domOf(q), a = st.ans[q.id] || {w:2, k:false};
+    card.innerHTML =
+      '<span class="corner tl">' + q.id + '</span><span class="corner br">' + q.id + '</span>' +
+      '<div class="chap">' + d.icon + '<span>第 ' + (domIndex[q.d] + 1) + ' 章 ' + d.name + '</span>' + (st.skip[q.id] && !isAns(q) ? '<span class="skipped-tag">先前跳過</span>' : '') + '</div>' +
+      '<div class="topic">' + q.topic + '</div><span class="typ">' + q.t + '</span>' +
+      '<div class="opts">' +
+        '<button class="opt" data-c="A"><span class="lt">A</span><span>' + q.a + '</span>' + STAMP + '</button>' +
+        '<button class="opt" data-c="B"><span class="lt">B</span><span>' + q.b + '</span>' + STAMP + '</button>' +
+      '</div>' +
+      '<div class="extra">' +
+        '<button class="mini" data-c="C">C 都可以</button><button class="mini" data-c="D">D 都不要</button>' +
+        '<span><span class="wlbl">這題對我</span> <span class="seg" role="group" aria-label="重要度"><button data-w="1">普通</button><button data-w="2">在意</button><button data-w="3">非常在意</button></span></span>' +
+        '<label class="know"><input type="checkbox"> 我猜得出是誰</label>' +
+      '</div>';
+    card.querySelectorAll("[data-c]").forEach(function(b){ b.addEventListener("click", function(){ choose(b.getAttribute("data-c")); }); });
+    card.querySelectorAll("[data-w]").forEach(function(b){ b.addEventListener("click", function(){ weight(+b.getAttribute("data-w")); }); });
+    card.querySelector(".know input").addEventListener("change", function(e){ know(e.target.checked); });
+    sync(); chrome();
+  }
+  function sync(){
+    var q = Q[st.cur], a = st.ans[q.id] || {w:2, k:false};
+    card.querySelectorAll("[data-c]").forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-c") === a.c)); });
+    card.querySelectorAll("[data-w]").forEach(function(b){ b.setAttribute("aria-pressed", String(+b.getAttribute("data-w") === (a.w || 2))); });
+    card.querySelector(".know input").checked = !!a.k;
+    card.classList.toggle("has", a.c === "A" || a.c === "B");
+  }
+  function cur(){ var q = Q[st.cur]; return st.ans[q.id] || (st.ans[q.id] = {w:2, k:false}); }
+  function choose(c){ var a = cur(); a.c = c; delete st.skip[Q[st.cur].id]; save(); sync(); chrome(); milestone(); }
+  function weight(w){ cur().w = w; save(); sync(); }
+  function know(k){ cur().k = k; save(); sync(); }
+
+  // ===== 移動與翻牌 =====
+  var busy = false;
+  function go(i){
+    if (i < 0 || i >= Q.length || busy) return;
+    if (i === st.cur) { render(); return; }
+    if (RM) { st.cur = i; save(); render(); return; }
+    busy = true;
+    card.classList.add("out");
+    setTimeout(function(){
+      st.cur = i; save(); render();
+      card.classList.remove("out"); card.classList.add("in");
+      void card.offsetWidth;
+      card.classList.remove("in");
+      busy = false;
+    }, 300);
+  }
+  function nextOpen(from){
+    for (var k = 1; k <= Q.length; k++) { var i = (from + k) % Q.length; if (!isAns(Q[i]) && i !== from) return i; }
+    return -1;
+  }
+  function chrome(){
+    var n = nAns(), q = Q[st.cur];
+    $("progTxt").textContent = n + " / 20";
+    $("progBar").style.width = (n / 20 * 100) + "%";
+    $("where").innerHTML = '第 <b>' + q.id + '</b> 張，共 20 張';
+    var nb = $("nextBtn"), done = n === 20;
+    nb.textContent = done ? "完成，去猜一猜" : "翻下一張";
+    nb.setAttribute("aria-disabled", String(!done && !isAns(q)));
+    nb.classList.toggle("ready", done);
+    $("prevBtn").setAttribute("aria-disabled", String(st.cur === 0));
+    $("skipBtn").setAttribute("aria-disabled", String(isAns(q) || nextOpen(st.cur) === -1));
+    paintBook(); paintOv();
+  }
+  $("nextBtn").addEventListener("click", next);
+  $("prevBtn").addEventListener("click", function(){ go(st.cur - 1); });
+  $("skipBtn").addEventListener("click", skip);
+  function next(){
+    if (nAns() === 20) { finish(); return; }
+    if (!isAns(Q[st.cur])) { toast("先圈選一個答案，或按「先跳過」。"); return; }
+    var i = nextOpen(st.cur); if (i >= 0) go(i);
+  }
+  function skip(){
+    var q = Q[st.cur]; if (isAns(q)) return;
+    var i = nextOpen(st.cur); if (i < 0) return;
+    st.skip[q.id] = true; save(); go(i);
+  }
+  document.addEventListener("keydown", function(e){
+    if ($("game").hidden || e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target.tagName; if (t === "INPUT" && e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    var k = e.key.toLowerCase();
+    if ("abcd".indexOf(k) >= 0 && k.length === 1) { choose(k.toUpperCase()); e.preventDefault(); }
+    else if (k === "1" || k === "2" || k === "3") weight(+k);
+    else if (k === "k") know(!cur().k);
+    else if (k === "arrowright" || k === "enter") { if (t !== "BUTTON" || k === "arrowright") { next(); e.preventDefault(); } }
+    else if (k === "arrowleft") go(st.cur - 1);
+  });
+
+  // ===== 里程碑提示 =====
+  var lastN = nAns(), toastTimer;
+  var MILES = {5:"完成 5 張，四分之一了。", 10:"一半了！後面會越答越快。", 15:"只剩 5 張。", 20:"20 張全部翻完！按「完成，去猜一猜」。"};
+  function milestone(){ var n = nAns(); if (n > lastN && MILES[n]) toast(MILES[n]); lastN = n; }
+  function toast(msg){
+    var t = $("toast");
+    t.innerHTML = '<svg viewBox="-30 -30 60 60" aria-hidden="true"><circle r="25" fill="none" stroke="var(--stamp)" stroke-width="5"/><path d="M-2 -15 V15 M0 -1 L10 6" stroke="var(--stamp)" stroke-width="5" stroke-linecap="round" fill="none"/></svg><span>' + msg + '</span>';
+    t.classList.add("on"); clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove("on"); }, 2600);
+  }
+
+  // ===== 開始 =====
+  $("startBtn").addEventListener("click", function(){ $("game").scrollIntoView(); });
+
+  // ===== 預測 =====
+  function show(id){
+    ["game","predict","count"].forEach(function(s){ $(s).hidden = s !== id; });
+    $("bar").style.display = id === "game" ? "" : "none";
+    $("toast").classList.remove("on");
+  }
+  function flagged(){ return Q.filter(function(q){ return st.ans[q.id] && st.ans[q.id].k; }); }
+  function finish(){
+    show("predict");
+    var fl = flagged(), box = $("pFlags"); box.innerHTML = "";
+    $("pFlagWrap").style.display = fl.length ? "" : "none";
+    fl.forEach(function(q){
+      var div = document.createElement("div"); div.className = "pq";
+      var snip = q.a.length > 46 ? q.a.slice(0, 46) + "…" : q.a;
+      div.innerHTML = '<b>第 ' + q.id + ' 張：' + q.topic + '</b><div class="snip">A：' + snip + '</div>' +
+        '<div class="pchoices" style="margin:0"><button class="pbtn" data-g="H">A 是黃世杰</button><button class="pbtn" data-g="Z">A 是張善政</button></div>';
+      div.querySelectorAll(".pbtn").forEach(function(b){
+        b.addEventListener("click", function(){ st.guess[q.id] = b.getAttribute("data-g"); save(); paintPredict(); });
+      });
+      div.setAttribute("data-q", q.id);
+      box.appendChild(div);
+    });
+    paintPredict();
+    $("predict").scrollIntoView();
+  }
+  $("pOverall").querySelectorAll(".pbtn").forEach(function(b){
+    b.addEventListener("click", function(){ st.g = b.getAttribute("data-g"); save(); paintPredict(); });
+  });
+  function paintPredict(){
+    $("pOverall").querySelectorAll(".pbtn").forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-g") === st.g)); });
+    $("pFlags").querySelectorAll(".pq").forEach(function(div){
+      var id = +div.getAttribute("data-q");
+      div.querySelectorAll(".pbtn").forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-g") === st.guess[id])); });
+    });
+    var ok = !!st.g && flagged().every(function(q){ return st.guess[q.id]; });
+    $("countBtn").setAttribute("aria-disabled", String(!ok));
+    $("countBtn").classList.toggle("ready", ok);
+  }
+  $("backBtn").addEventListener("click", function(){ show("game"); render(); $("game").scrollIntoView(); });
+  $("countBtn").addEventListener("click", function(){
+    if (this.getAttribute("aria-disabled") === "true") { toast("先完成上面的直覺預測。"); return; }
+    startCount();
+  });
+
+  // ===== 解碼封存答案 =====
+  function keyString(){ return atob(KEY_B64).split("").reverse().join(""); }
+  function mapping(){
+    var m = {};
+    keyString().split("|").forEach(function(p){ var r = /^Q(\d+):A=(\w),B=(\w)$/.exec(p); if (r) m[+r[1]] = {A:r[2], B:r[3]}; });
+    return m;
+  }
+  var M = mapping();
+
+  // ===== 計分（劃數：A/B 一題 2×權重，C 兩邊各 1×權重，D 記入「都不要」）=====
+  function delta(q){
+    var a = st.ans[q.id], w = a.w || 2, r = {Z:0, H:0, N:0};
+    if (a.c === "A" || a.c === "B") r[M[q.id][a.c]] = 2 * w;
+    else if (a.c === "C") { r.Z = w; r.H = w; }
+    else r.N = 2 * w;
+    return r;
+  }
+  function score(excl){
+    var tot = {Z:0,H:0,N:0}, dom = {};
+    Q.forEach(function(q){
+      if (!isAns(q) || (excl && st.ans[q.id].k)) return;
+      var r = delta(q); dom[q.d] = dom[q.d] || {Z:0,H:0,N:0};
+      ["Z","H","N"].forEach(function(k){ tot[k] += r[k]; dom[q.d][k] += r[k]; });
+    });
+    return {tot:tot, dom:dom};
+  }
+  function lean(t){ var s = t.Z + t.H; if (!s) return "E"; var dz = (t.Z - t.H) / s * 100; return Math.abs(dz) < 10 ? "E" : (dz > 0 ? "Z" : "H"); }
+  function verdict(t){
+    var s = t.Z + t.H; if (!s) return "樣本不足";
+    var dz = (t.Z - t.H) / s * 100;
+    if (Math.abs(dz) < 10) return "大致均衡（差距不到 10 個百分點）";
+    return (Math.abs(dz) >= 40 ? "明顯偏向 " : "略偏向 ") + (dz > 0 ? "張善政" : "黃世杰");
+  }
+
+  // ===== 開票 =====
+  var STROKES = ["M4 5 H30", "M17 5 V31", "M17 18 H28", "M8 16 V31", "M2 31 H32"];
+  function tally(el, n){
+    var html = "", full = Math.floor(n / 5), rem = n % 5;
+    for (var i = 0; i < full; i++) html += glyph(5);
+    if (rem) html += glyph(rem);
+    el.innerHTML = html;
+  }
+  function glyph(k){
+    var p = ""; for (var i = 0; i < k; i++) p += '<path d="' + STROKES[i] + '" stroke-width="3.2" stroke-linecap="round" fill="none"/>';
+    return '<svg viewBox="0 0 34 36" aria-hidden="true">' + p + '</svg>';
+  }
+  var timer = null;
+  function startCount(){
+    show("count");
+    var run = {Z:0, H:0, N:0}, i = 0;
+    tally($("tH"), 0); tally($("tZ"), 0); $("cH").textContent = "0"; $("cZ").textContent = "0"; $("nvote").textContent = "";
+    $("count").scrollIntoView();
+    function step(){
+      if (i >= Q.length) { clearInterval(timer); timer = null; $("callout").innerHTML = "<b>開票完畢</b>"; setTimeout(reveal, RM ? 0 : 900); return; }
+      var q = Q[i], a = st.ans[q.id], r = delta(q), w = a.w || 2, msg;
+      ["Z","H","N"].forEach(function(k){ run[k] += r[k]; });
+      if (a.c === "A" || a.c === "B") msg = "第 " + q.id + " 張：你圈 " + a.c + "，" + a.c + " 是 <b>" + NAME[M[q.id][a.c]] + "</b>（" + WLBL[w] + "，+" + 2 * w + " 劃）";
+      else if (a.c === "C") msg = "第 " + q.id + " 張：都可以，兩邊各 +" + w + " 劃";
+      else msg = "第 " + q.id + " 張：都不要，不計入任何一方";
+      $("callout").innerHTML = msg;
+      tally($("tH"), run.H); tally($("tZ"), run.Z);
+      $("cH").textContent = run.H; $("cZ").textContent = run.Z;
+      $("nvote").textContent = run.N ? "「都不要」累計 " + run.N + " 劃" : "";
+      i++;
+    }
+    if (RM) { while (i < Q.length) step(); step(); return; }
+    timer = setInterval(step, 480);
+    $("fastBtn").onclick = function(){ if (!timer) return; clearInterval(timer); timer = null; while (i < Q.length) step(); step(); };
+  }
+
+  // ===== 揭曉 =====
+  function splitBar(el, t){
+    var all = t.Z + t.H + t.N;
+    if (!all) { el.innerHTML = '<div class="sn" style="flex:1">無可計分題目</div>'; return; }
+    var ph = t.H / all * 100, pz = t.Z / all * 100, pn = t.N / all * 100;
+    var rh = Math.round(ph), rn = Math.round(pn), rz = pz ? 100 - rh - rn : 0;
+    el.innerHTML =
+      (ph ? '<div class="sh" style="flex:' + ph + '">' + (ph >= 12 ? rh + '%' : '') + '</div>' : '') +
+      (pz ? '<div class="sz" style="flex:' + pz + '">' + (pz >= 12 ? rz + '%' : '') + '</div>' : '') +
+      (pn ? '<div class="sn" style="flex:' + pn + '">' + (pn >= 12 ? 'D ' + rn + '%' : '') + '</div>' : '');
+  }
+  var LEAN = {H:"偏向黃世杰", Z:"偏向張善政", E:"差不多"};
+  function reveal(){
+    show(null);
+    var res = $("result"); res.innerHTML = "";
+    res.appendChild($("phase2").content.cloneNode(true));
+    res.classList.add("on");
+
+    var all = score(false), ex = score(true), actual = lean(all.tot);
+    $("gOverall").textContent = LEAN[st.g] || "未作答";
+    $("aOverall").textContent = LEAN[actual];
+    $("gMark").innerHTML = st.g === actual ? '<span style="color:var(--ok)">猜中了</span>' : '<span style="color:var(--warn)">有落差</span>';
+    var fl = flagged(), hit = fl.filter(function(q){ return st.guess[q.id] === M[q.id].A; }).length;
+    if (!fl.length) $("gFlags").textContent = "你沒有標記任何「猜得出」的牌，整份測驗都算在盲測條件下完成。";
+    else {
+      var acc = Math.round(hit / fl.length * 100);
+      $("gFlags").textContent = "你標了 " + fl.length + " 張「猜得出」的牌，實際猜對 " + hit + " 張（" + acc + "%）。" +
+        (acc >= 80 ? "【推論】這些題目的改寫仍保留身分線索，排除它們的那組結果比較可信。" :
+         acc <= 60 ? "【推論】準確率接近擲硬幣，這些題目其實沒有你以為的那麼好認，盲測效果比預期好。" : "");
+    }
+
+    splitBar($("barAll"), all.tot); splitBar($("barEx"), ex.tot);
+    $("vAll").textContent = verdict(all.tot); $("vEx").textContent = verdict(ex.tot);
+    $("nAll").textContent = "總劃數：黃 " + all.tot.H + "、張 " + all.tot.Z + "、都不要 " + all.tot.N;
+    $("nEx").textContent = "排除 " + fl.length + " 張可辨識牌後：黃 " + ex.tot.H + "、張 " + ex.tot.Z + (fl.length >= 10 ? "。可辨識牌超過一半，這組樣本偏小，請保守解讀。" : "");
+
+    var dtb = document.querySelector("#domTbl tbody");
+    DOMAINS.forEach(function(dm){
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td>' + dm.name + '</td><td><div class="split" style="height:26px;margin:0"></div></td><td>' + chapQs(dm.id).length + '</td>';
+      dtb.appendChild(tr); splitBar(tr.querySelector(".split"), all.dom[dm.id] || {Z:0,H:0,N:0});
+    });
+
+    // 關鍵牌：單張改選即可翻轉（或打平）整體領先者
+    var t = all.tot, margin = Math.abs(t.Z - t.H), leader = t.Z > t.H ? "Z" : t.H > t.Z ? "H" : null, piv = {};
+    Q.forEach(function(q){
+      var a = st.ans[q.id], w = a.w || 2, sw = 0;
+      if (a.c === "A" || a.c === "B") { if (M[q.id][a.c] === leader) sw = 4 * w; }
+      else sw = 2 * w;
+      if (leader && sw >= margin) piv[q.id] = true;
+    });
+    var pl = Object.keys(piv);
+    $("pivot").textContent = !leader ? "目前兩邊完全平手，任何一張改選都會打破平手。" :
+      pl.length ? "第 " + pl.join("、") + " 張只要改選一張，領先者就會換人或打平。它們是決定你結果的關鍵牌，值得再想一次。" :
+      "沒有任何一張牌單獨改選就能翻轉結果，你的傾向相當穩定（領先 " + margin + " 劃）。";
+
+    var g = $("rgrid");
+    Q.forEach(function(q){
+      var a = st.ans[q.id], m = M[q.id], pick = (a.c === "A" || a.c === "B") ? NAME[m[a.c]] : (a.c === "C" ? "都可以" : "都不要");
+      var pc = (a.c === "A" || a.c === "B") ? (m[a.c] === "Z" ? "pZ" : "pH") : "pN";
+      var pill = function(c){ return '<span class="pill ' + (c === "Z" ? "pZ" : "pH") + '">' + NAME[c] + '</span>'; };
+      var el = document.createElement("div");
+      el.className = "rcard" + (piv[q.id] ? " key-wrap" : "");
+      el.tabIndex = 0; el.setAttribute("role", "button"); el.setAttribute("aria-pressed", "false");
+      el.setAttribute("aria-label", "第 " + q.id + " 張，" + q.topic + "，按下翻面");
+      el.innerHTML = '<div class="rin">' +
+        '<div class="rf' + (piv[q.id] ? ' key' : '') + '"><div class="no">' + q.id + '</div><div class="tp">' + q.topic + '</div><div>你圈 <b>' + a.c + '</b>，' + WLBL[a.w || 2] + (a.k ? '，猜得出' : '') + '</div><div class="hint">點一下翻面</div></div>' +
+        '<div class="rb"><div class="row"><span>A</span>' + pill(m.A) + '</div><div class="row"><span>B</span>' + pill(m.B) + '</div>' +
+        '<div class="row"><span>你選的是</span><span class="pill ' + pc + '">' + pick + '</span></div>' +
+        '<div class="row"><span>類型</span><span>' + q.t + '</span></div>' +
+        '<div class="src">出處：<a href="' + SRC[q.id].H + '" target="_blank" rel="noopener">黃</a>・<a href="' + SRC[q.id].Z + '" target="_blank" rel="noopener">張</a></div></div></div>';
+      function flip(){ el.classList.toggle("flip"); el.setAttribute("aria-pressed", String(el.classList.contains("flip"))); }
+      el.addEventListener("click", function(e){ if (e.target.closest("a")) return; flip(); });
+      el.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(); } });
+      g.appendChild(el);
+    });
+
+    $("keyPlain").textContent = keyString();
+    $("verifyBtn").addEventListener("click", verify);
+    $("resetBtn").addEventListener("click", function(){
+      st = {ans:{}, guess:{}, g:null, cur:0, skip:{}}; save();
+      DOMAINS.forEach(function(d){ fullSeen[d.id] = false; }); lastN = 0;
+      res.classList.remove("on"); res.innerHTML = "";
+      show("game"); render(); $("game").scrollIntoView();
+    });
+    res.scrollIntoView();
+  }
+
+  function verify(){
+    var out = $("verifyOut");
+    if (!(window.crypto && crypto.subtle)) { out.textContent = "此瀏覽器不支援本機雜湊運算，請以其他工具計算上方字串的 SHA-256。"; return; }
+    crypto.subtle.digest("SHA-256", new TextEncoder().encode(keyString())).then(function(buf){
+      var hex = Array.prototype.map.call(new Uint8Array(buf), function(b){ return ("0" + b.toString(16)).slice(-2); }).join("");
+      out.innerHTML = hex === COMMIT
+        ? '<strong style="color:var(--ok)">一致</strong>：計算結果與出題時封存的雜湊相同，對應關係未被改動。'
+        : '<strong style="color:var(--bad)">不一致</strong>：計算結果 ' + hex;
+    });
+  }
+
+  if (st.cur < 0 || st.cur >= Q.length) st.cur = 0;
+  show("game"); render();
+})();
+</script>
+</body>
+</html>
